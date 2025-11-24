@@ -1,0 +1,27 @@
+# Ignoring common build and distribution folders
+/dist
+/build
+/*.egg-info/
+
+# Python-specific
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.env
+
+# Editor/IDE specific
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# TeachLens specific
+*.wav
+*.mp4
+*.bin

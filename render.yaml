@@ -1,0 +1,12 @@
+# render.yaml
+services:
+  - type: web
+    name: teachlens
+    env: python
+    buildCommand: "pip install -r requirements.txt && python -m playwright install" # Install playwright for ffmpeg (or provide ffmpeg as a custom build step)
+    startCommand: "gunicorn app:app" # Using gunicorn for production Flask deployment
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: "1"
+      - key: WEB_CONCURRENCY
+        value: "2" # Adjust based on your instance type
